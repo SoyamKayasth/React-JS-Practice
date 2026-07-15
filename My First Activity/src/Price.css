@@ -1,0 +1,16 @@
+.old{
+   text-decoration-line: line-through;
+
+}
+
+.new{
+  font-weight: bold;
+
+}
+
+.price{
+    background-color:  #e0c367;
+    height: 2.5rem;
+    border-radius: 0 0 1rem 1rem;
+    align-content: center;
+}
