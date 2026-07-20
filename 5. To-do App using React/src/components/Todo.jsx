@@ -6,13 +6,7 @@ import { v4 as uuid } from 'uuid';
 
 export default function Todo(){
     
- const [tasks, setTasks] = useState([{
-                                    id : uuid(),
-                                    name : "Organize Task" , 
-                                    isDone: false,
-                                    isEdit: false,
-                                    createdAt: Date.now()
-                                  }]);
+ const [tasks, setTasks] = useState([]);
   
  const [newTodo, setNewTodo] = useState("");
  

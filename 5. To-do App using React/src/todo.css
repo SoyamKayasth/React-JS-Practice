@@ -1,5 +1,7 @@
 body{
     background: linear-gradient(#93d3eb , #f8ffda);
+    background-repeat:no-repeat;
+    background-color: #f8ffda;
     padding-top: 11rem;
     height: 100vh;
 }
