@@ -21,6 +21,9 @@ A simple, responsive, and interactive Todo application built with **React.js**. 
 
 ## 📸 Preview
 
+<p align="center">
+  <img src="screenshots/preview.png" width="900">
+</p>
 
 ---
 
