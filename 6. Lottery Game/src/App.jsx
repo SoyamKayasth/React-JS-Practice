@@ -1,4 +1,5 @@
-import Lottery from "./Lottery"
+import Lottery from "./components/Lottery"
+import "./App.css"
 
 function App() {
  
