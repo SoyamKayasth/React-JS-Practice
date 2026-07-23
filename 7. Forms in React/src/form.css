@@ -1,0 +1,16 @@
+.form{
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    margin: 1.3rem;
+    padding: 1rem;
+    align-items: center;
+}
+
+.field{
+    display: flex;
+    gap: 1rem;
+    margin: 0.6rem;
+    width: 100%;
+}
+
