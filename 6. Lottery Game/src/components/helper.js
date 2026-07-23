@@ -11,4 +11,6 @@ const sum = (num) => {
        return num.reduce((acc , curr) => acc + curr, 0);
 }
 
+
+
 export {genTicket, sum};

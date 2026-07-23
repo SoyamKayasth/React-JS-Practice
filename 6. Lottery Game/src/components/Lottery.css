@@ -8,7 +8,7 @@
   flex-grow: 1;
 
   @media (max-width: 1024px) {
-    padding: 32px 20px 24px;
+    padding: 22px 20px 18px;
     gap: 18px;
   }
 }
@@ -21,11 +21,37 @@
   border: 1px solid #ba3ba5;
   background-color: rgb(246, 234, 219);
   border-radius: 1rem;
-  padding: 3rem 6rem;
+  padding: 0rem 6rem 3rem;
   margin: 1rem;
 }
 
 .num{
   font-size: 40px;
   font-family: system-ui, -apple-system;
+}
+.nums{
+   display: flex;
+  flex-direction: row;
+  gap: 0.2rem;
+  place-content: center;
+  place-items: center;
+  flex-grow: 1;
+
+}
+
+.btn{
+  border: none;
+  background-color: rgb(124, 71, 173);
+  color: white;
+  font-size: large;
+  padding: 0.8rem 2rem;
+  border-radius: 1rem;
+}
+
+.btn:hover{
+  border: 3px solid #cf17b0;
+}
+.btn:active{
+    border: 3px solid #cf17b0;
+
 }
