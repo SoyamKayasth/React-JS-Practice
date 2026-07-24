@@ -1,13 +1,11 @@
 import { useState } from 'react'
-import ReviewForm from "./ReviewForm"
-import './App.css'
+import Reviews from "./Reviews"
 
 function App() {
 
   return (
     <>
-     <h2>Forms in React</h2>
-       <ReviewForm/>
+       <Reviews/>
     </>
   )
 }

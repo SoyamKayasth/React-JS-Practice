@@ -1,16 +1,129 @@
-.form{
-    background-color: aliceblue;
-    display: flex;
-    flex-direction: column;
-    margin: 1.3rem;
-    padding: 1rem;
-    align-items: center;
+/* Page Background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #9face6);
 }
 
-.field{
-    display: flex;
-    gap: 1rem;
-    margin: 0.6rem;
-    width: 100%;
+/* Form Container */
+.form {
+  width: 100%;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
+/* Heading */
+.form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 28px;
+}
+
+/* Field Container */
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+/* Labels */
+.field label {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+/* Inputs & Textarea */
+.field input,
+.field textarea {
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+/* Focus Effect */
+.field input:focus,
+.field textarea:focus {
+  border-color: #4f8dfd;
+  box-shadow: 0 0 8px rgba(79, 141, 253, 0.3);
+}
+
+/* Textarea */
+.field textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Number Input */
+.field input[type="number"] {
+  width: 100px;
+}
+
+/* Button */
+.counter.btn,
+.field button {
+  width: 100%;
+  padding: 14px;
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #4f8dfd, #3a6ff7);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Button Hover */
+.counter.btn:hover,
+.field button:hover {
+  background: linear-gradient(135deg, #3a6ff7, #2b5de0);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(58, 111, 247, 0.35);
+}
+
+/* Button Active */
+.counter.btn:active,
+.field button:active {
+  transform: scale(0.98);
+}
+
+/* Placeholder */
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #999;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .form {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .form h2 {
+    font-size: 24px;
+  }
+
+  .field input,
+  .field textarea,
+  .field button {
+    font-size: 15px;
+  }
+}
+
+
+.err{
+    color: red;
+}
