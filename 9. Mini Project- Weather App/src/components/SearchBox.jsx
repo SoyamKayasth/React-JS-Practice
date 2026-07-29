@@ -22,9 +22,20 @@ const handleSubmit = (e) => {
 }
 
 const getWeatherInfo = async() => {
-    let res = await fetch(`${API_URL}?q=${city}&appid=${API_KEY}`);
-    let resJson = await res.json();
-     console.log(resJson);
+    let res = await fetch(`${API_URL}?q=${city}&appid=${API_KEY}&units=metric`);
+    let jsonRes = await res.json();
+    let result = {
+                  city:jsonRes.name,
+                  temp:jsonRes.main.temp,
+                  temp_min: jsonRes.main.temp_min,
+                  temp_max: jsonRes.main.temp_max,
+                  humidity: jsonRes.main.humidity,
+                  feelsLike:jsonRes.main.feels_like,
+                  weather:jsonRes.weather[0].description,
+                  icon:jsonRes.weather[0].icon, 
+    };
+    console.log(result);
+    return result;
 }
 
  return(
@@ -41,6 +52,9 @@ const getWeatherInfo = async() => {
 />
   
    </div>
+  <br />
+  <br />
+    
    <div>
       <Button type='submit' variant="contained" className='search-button' endIcon=  {<SearchIcon />}>
         Search
