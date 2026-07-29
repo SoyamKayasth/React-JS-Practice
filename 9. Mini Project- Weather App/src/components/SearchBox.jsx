@@ -7,6 +7,8 @@ import "./weather.css"
 export default function SearchBox({update}){
   
 const [city , setCity] = useState("");
+const [err , setErr] = useState(false);
+
 const API_URL = "https://api.openweathermap.org/data/2.5/weather"
 const API_KEY = import.meta.env.VITE_API_KEY;
 
@@ -21,6 +23,8 @@ const handleSubmit = (e) => {
 }
 
 const getWeatherInfo = async() => {
+    try{
+    setErr(false);
     let res = await fetch(`${API_URL}?q=${city}&appid=${API_KEY}&units=metric`);
     let jsonRes = await res.json();
     let result = {
@@ -34,11 +38,14 @@ const getWeatherInfo = async() => {
                   icon:jsonRes.weather[0].icon, 
     };
     update(result);
+  }catch(e){
+      setErr(true);
+  }
 }
 
  return(
     <div className="search-container">
-          <h2 className='heading'>Search For Weather</h2>
+        <h2 className='heading'>Search For Weather</h2>
         <form onSubmit={handleSubmit}>
         <div className="searchBox">
         <div className='inputBox'>
@@ -59,6 +66,7 @@ const getWeatherInfo = async() => {
       </Button>
       </div>
       </div>
+        {err && <p>No such place exists!</p>}
       </form>
     </div>
  );
