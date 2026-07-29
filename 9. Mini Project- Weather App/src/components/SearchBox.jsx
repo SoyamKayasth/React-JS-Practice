@@ -4,7 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import { useState } from 'react';
 
 import "./weather.css"
-export default function SearchBox(){
+export default function SearchBox({update}){
   
 const [city , setCity] = useState("");
 const API_URL = "https://api.openweathermap.org/data/2.5/weather"
@@ -16,7 +16,6 @@ const handleChange = (e) => {
 
 const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(city);
     getWeatherInfo();
     setCity("");
 }
@@ -34,8 +33,7 @@ const getWeatherInfo = async() => {
                   weather:jsonRes.weather[0].description,
                   icon:jsonRes.weather[0].icon, 
     };
-    console.log(result);
-    return result;
+    update(result);
 }
 
  return(

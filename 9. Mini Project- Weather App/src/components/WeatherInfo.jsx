@@ -5,7 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 
 
-export default function WeatherInfo(){
+export default function WeatherInfo({info}){
 
     let cold_img = "https://images.unsplash.com/photo-1732183940953-4fabd045d5e3?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
@@ -13,17 +13,7 @@ export default function WeatherInfo(){
 
     let rainy_img = "https://images.unsplash.com/photo-1548183420-34082a25f0d6?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 
-   
-    const [info , setInfo] = useState({
-                  city:"Mumbai",
-                  temp:28.49,
-                  temp_min: 28.49,
-                  temp_max: 28.49,
-                  humidity: 83,
-                  feelsLike:33.92,
-                  weather:"light rain",
-                  icon:"10d", 
-    });
+
 
     return(
          <div className="infoBox">

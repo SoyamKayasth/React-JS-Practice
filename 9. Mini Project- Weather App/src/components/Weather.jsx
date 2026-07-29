@@ -5,13 +5,26 @@ import { useState } from "react";
 
 export default function Weather(){
 
+   const [info , setInfo] = useState({
+                                        city:"Mumbai",
+                                        temp:28.49,
+                                        temp_min: 28.49,
+                                        temp_max: 28.49,
+                                        humidity: 83,
+                                        feelsLike:33.92,
+                                        weather:"light rain",
+                                        icon:"10d", 
+                        });
 
+   const updateInfo = (newInfo) => {
+     setInfo(newInfo);
+   }                     
 
     return(
      <>
-        <SearchBox></SearchBox>
+        <SearchBox update = {updateInfo}></SearchBox>
 
-         <WeatherInfo></WeatherInfo> 
+         <WeatherInfo info = {info}></WeatherInfo> 
      </>
     );
 }
