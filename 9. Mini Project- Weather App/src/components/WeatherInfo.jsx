@@ -11,9 +11,9 @@ export default function WeatherInfo({info}){
 
     let hot_img = "https://images.unsplash.com/photo-1656890612031-699e56451ea8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
-    let rainy_img = "https://images.unsplash.com/photo-1548183420-34082a25f0d6?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    let rainy_img = "https://images.unsplash.com/photo-1727373217103-d64866ce6ee8?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
-
+    let clear_sky = "https://images.unsplash.com/photo-1566321343730-237ec35e53f3?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
     return(
          <div className="infoBox">
@@ -22,13 +22,14 @@ export default function WeatherInfo({info}){
            <div className="card-container">
                <Card sx={{ maxWidth: 345 }}>
       <CardMedia
-        sx={{ height: 160 }}
-        image="https://images.unsplash.com/photo-1592698117601-70c282996f9c?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        sx={{ height: 180 }}
+        image= {(info.humidity > 80) ? rainy_img : (info.temp > 27) ? hot_img : info.temp > 15 ? clear_sky : cold_img}
         title="clear sky"
+        className="image"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-        <div className="city">{info.city}</div>
+        <div className="city">{info.city} <img src={`http://openweathermap.org/img/w/${info.icon}.png`} className="icon" alt="icon" /></div>
         </Typography>
         <Typography variant="body2" sx={{ color: 'text.secondary' }} component="span">
           <p>Temperature = {info.temp}&deg;C</p>
