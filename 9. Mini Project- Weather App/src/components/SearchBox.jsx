@@ -66,7 +66,7 @@ const getWeatherInfo = async() => {
       </Button>
       </div>
       </div>
-        {err && <p>No such place exists!</p>}
+        {err && <p className='error'>No such place exists!</p>}
       </form>
     </div>
  );
