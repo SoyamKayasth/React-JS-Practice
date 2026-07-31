@@ -137,20 +137,6 @@ https://openweathermap.org/api
 
 ---
 
-## 📸 Screenshots
-
-> Add screenshots of your application here.
-
-```
-Home Screen
-
-Search Result
-
-Weather Card
-```
-
----
-
 ## 🚀 React Concepts Learned
 
 This project helped me understand and practice several important React concepts, including:
