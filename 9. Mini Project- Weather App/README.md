@@ -19,7 +19,11 @@ The application fetches live weather data from the **OpenWeatherMap Weather API*
 This project was built while learning **React.js**, focusing on component-based architecture, state management, API integration, and asynchronous programming.
 
 ---
+## 📸 Preview
 
+![SkyCast Preview](./preview.png)
+
+---
 
 ## ✨ Features
 
