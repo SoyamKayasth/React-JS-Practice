@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -20,12 +19,12 @@ export default function WeatherInfo({info}){
            <h1>Weather info</h1>
 
            <div className="card-container">
-               <Card sx={{ maxWidth: 345 }}>
+               <Card className="weatherCard">
       <CardMedia
         sx={{ height: 180 }}
         image= {(info.humidity > 80) ? rainy_img : (info.temp > 27) ? hot_img : info.temp > 15 ? clear_sky : cold_img}
-        title="clear sky"
-        className="image"
+        title= {info.weather}
+        className="weatherImage"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">

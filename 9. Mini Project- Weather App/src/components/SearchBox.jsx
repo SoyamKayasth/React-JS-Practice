@@ -39,6 +39,7 @@ const getWeatherInfo = async() => {
     };
     update(result);
   }catch(e){
+      console.log(e);
       setErr(true);
   }
 }
@@ -49,21 +50,32 @@ const getWeatherInfo = async() => {
         <form onSubmit={handleSubmit}>
         <div className="searchBox">
         <div className='inputBox'>
-        <TextField id="city" name='city' 
-        label="City Name" 
-        onChange={handleChange}
-        value={city}
-        variant="outlined" required
+        <TextField
+    id="city"
+    name="city"
+    label="City Name"
+    variant="outlined"
+    onChange={handleChange}
+    value={city}
+    required
+    fullWidth
 />
+
+
   
    </div>
   <br />
   <br />
     
    <div>
-      <Button type='submit' variant="contained" className='search-button' endIcon=  {<SearchIcon />}>
-        Search
-      </Button>
+      <Button
+    type="submit"
+    variant="contained"
+    endIcon={<SearchIcon />}
+    className="searchBtn"
+>
+    Search
+</Button>
       </div>
       </div>
         {err && <p className='error'>No such place exists!</p>}
