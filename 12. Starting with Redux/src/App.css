@@ -17,6 +17,10 @@
   }
 }
 
+.linethrough{
+  text-decoration: line-through;
+}
+
 .hero {
   position: relative;
 
