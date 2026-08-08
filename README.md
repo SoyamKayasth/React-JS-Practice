@@ -28,7 +28,7 @@ concepts, including:
 -   `useState`
 -   `useEffect`
 -   Component-based architecture
--   Basic state management patterns
+-   React patterns
 -   Building reusable UI components
 -   Working with APIs
 -   Basic Redux
@@ -41,55 +41,16 @@ understand how these concepts are applied in real applications.
 
 ## Projects
 
-  -----------------------------------------------------------------------------------------------
-  \#                Project           Description       Live Demo
-  ----------------- ----------------- ----------------- -----------------------------------------
-  1                 **To-Do App**     A task management [Live
-                                      application built Demo](https://to-do-app411.vercel.app/)
-                                      while practicing  
-                                      React state and   
-                                      event handling.   
+| # | Project | Description | Live Demo |
+|---|---|---|---|
+| 1 | **To-Do App** | A task management application built while practicing React state and event handling. | [Live Demo](https://to-do-app411.vercel.app/) |
+| 2 | **Lottery Game** | A small React game project created to practice components, state, and application logic. | — |
+| 3 | **Ludo Dice Counter** | A simple dice-based project built to practice React state and event handling. | — |
+| 4 | **Review Form** | An interactive review form demonstrating form handling and form validation, user input, and React state. | [Live Demo](https://getreview.vercel.app/) |
+| 5 | **Interactive Card** | A card UI project created while learning styling, components, and interactive behavior. | — |
+| 6 | **Weather App - SkyCast** | A weather application built with React that fetches and displays real-time weather information using an API. | [Live Demo](https://skycast411.vercel.app/) |
 
-  2                 **Lottery Game**  A small React     ---
-                                      game project      
-                                      created to        
-                                      practice          
-                                      components,       
-                                      state, and logic. 
-
-  3                 **Ludo Dice       A simple          ---
-                    Counter**         dice-based        
-                                      project built to  
-                                      practice React    
-                                      state and event   
-                                      handling.         
-
-  4                 **Review Form**   An interactive    [Live
-                                      review form       Demo](https://getreview.vercel.app/)
-                                      demonstrating     
-                                      form handling and 
-                                      React state.      
-
-  5                 **Interactive     A card UI project ---
-                    Card**            created while     
-                                      learning styling, 
-                                      components, and   
-                                      interactive       
-                                      behavior.         
-
-  6                 **Weather App -   A weather         [Live
-                    SkyCast**         application that  Demo](https://skycast411.vercel.app/)
-                                      fetches weather   
-                                      information from  
-                                      an API and        
-                                      displays it       
-                                      through a         
-                                      responsive React  
-                                      interface.        
-  -----------------------------------------------------------------------------------------------
-
-> Some projects in this repository are practice projects and may not
-> have a separate live deployment.
+> Some projects are practice projects and do not have a separate live deployment.
 
 ## Technologies & Tools
 
