@@ -1,14 +1,13 @@
-import React from 'react'
 
 function LeftContent() {
   return (
-    <div className='bg-pink-600 h-full w-1/4'>LeftContent
+    <div className='bg-pink-600 h-full w-1/4 flext flex-col'>LeftContent
        <div>
-          <h1>This is heading</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem officiis laborum veritatis. Tempora dolores, ipsum quaerat repellat placeat harum explicabo, possimus unde illo, amet numquam voluptates facilis dolor facere ex.</p>
+          <h1 className="font-bold text-2xl">This is heading</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt assumenda veritatis aut mollitia, repudiandae animi explicabo tempora hic, quia at reprehenderit impedit quaerat quam. Illo est dolor saepe neque recusandae!</p>
        </div>
-       <div>
-           <i class="ri-arrow-right-up-line"></i>  
+       <div className="text-5xl mt-16">
+           <i className="ri-arrow-right-up-line"></i>  
        </div>
 
     </div>
