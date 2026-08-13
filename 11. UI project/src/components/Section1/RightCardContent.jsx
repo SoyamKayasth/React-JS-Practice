@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const RightCardContent = (props) => {
   return (
@@ -7,22 +7,30 @@ const RightCardContent = (props) => {
         {props.id + 1}
       </h2>
       <div className=" text-white">
-        <p className="mb-15 text-lg leading-relaxed">
+        <p className="mb-15 text-lg font-medium tracking-wider leading-relaxed">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi
           recusandae magnam quam impedit assumenda provident.
         </p>
 
         <div className="flex justify-between font-medium">
-          <button type="button" className="bg-blue-600 px-8 py-2 rounded-full">
+          <button
+            type="button"
+            style={{ backgroundColor: props.btnColor }}
+            className="px-12 py-2 rounded-full cursor-pointer"
+          >
             {props.tag}
           </button>
-          <button type="button" className="bg-blue-600 rounded-full px-3 py-2">
+          <button
+            type="button"
+            style={{ backgroundColor: props.btnColor }}
+            className="rounded-full px-3 py-2"
+          >
             <i className="ri-arrow-right-line"></i>
           </button>
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default RightCardContent
+export default RightCardContent;
