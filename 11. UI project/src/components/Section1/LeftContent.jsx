@@ -1,17 +1,15 @@
+import React from "react";
+import HeroText from "./HeroText";
+import Arrow from "./Arrow";
 
 function LeftContent() {
   return (
-    <div className='bg-pink-600 h-full w-1/4 flext flex-col'>LeftContent
-       <div>
-          <h1 className="font-bold text-2xl">This is heading</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt assumenda veritatis aut mollitia, repudiandae animi explicabo tempora hic, quia at reprehenderit impedit quaerat quam. Illo est dolor saepe neque recusandae!</p>
-       </div>
-       <div className="text-5xl mt-16">
-           <i className="ri-arrow-right-up-line"></i>  
-       </div>
+    <div className="h-full w-1/3 flex flex-col justify-between">
+      <HeroText />
 
+      <Arrow />
     </div>
-  )
+  );
 }
 
-export default LeftContent
+export default LeftContent;

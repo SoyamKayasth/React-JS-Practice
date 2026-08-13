@@ -2,10 +2,12 @@ import Navbar from "./Navbar";
 import Page1Content from "./Page1Content";
 const Section1 = () => {
       return ( 
-            <div className="h-screen w-full bg-amber-400 flex flex-col"> 
+            
+            <div className="h-screen w-full flex flex-col"> 
             <Navbar/>
                   <Page1Content/>
             </div>
+         
        );
 }
  
