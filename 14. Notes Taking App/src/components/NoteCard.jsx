@@ -2,7 +2,7 @@ import React from 'react'
 
 const NoteCard = () => {
   return (
-    <div>
+    <div className='bg-white h-52 w-30 rounded-2xl'>
       
     </div>
   )

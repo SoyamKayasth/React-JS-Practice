@@ -1,8 +1,14 @@
 import React from 'react'
 
 const Form = () => {
+
+     const handleSubmit = (e) => {
+         e.preventDefault();
+     } 
+
+
     return (
-        <form action="" className='flex flex-col gap-4 items-start lg:w-1/2 p-10'>
+        <form action="" onSubmit={handleSubmit} className='flex flex-col gap-4 items-start lg:w-1/2 p-10'>
 
             <h1 className='text-4xl font-bold mb-6'>Add Notes</h1>
 
