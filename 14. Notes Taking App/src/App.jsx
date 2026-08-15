@@ -7,19 +7,16 @@ import { v4 as uuid } from 'uuid';
 
 const App = () => {
   
-  const [notes , setNotes] = useState([{
-         id: uuid(),
-         title: "This is 1st Note",
-         isDone: false,
-    }]);
+  const [notes , setNotes] = useState([]);
    
-  const addNote = (title) => {
+  const addNote = (title , details) => {
     let newNote = {
          id: uuid(),
          title: title,
+         details: details,
          isDone: false,
     };
-    setNote((prev) => 
+    setNotes((prev) => 
      [...prev , newNote]
     );
   }
@@ -27,7 +24,7 @@ const App = () => {
 
 
   return (
-    <div className='h-screen bg-black text-white lg:flex'>
+    <div className='h-screen bg-black text-white lg:flex overflow-auto scrollbar-none'>
           <Form  addNote = {addNote} />
           <ShowNotes notes = {notes} />        
     </div>
