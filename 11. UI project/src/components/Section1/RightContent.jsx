@@ -12,7 +12,7 @@ function RightContent({users}) {
     if (!slider) return;
 
     const scroll = () => {
-      slider.scrollLeft += 1.3;
+      slider.scrollLeft += 1;
 
       // We've reached the end of the first set
       if (slider.scrollLeft >= slider.scrollWidth / 2) {
@@ -36,7 +36,6 @@ function RightContent({users}) {
       ref={sliderRef}
       onMouseLeave={startAutoScroll}
       onMouseEnter={stopAutoScroll}
-      id="sliding"
       className="flex flex-nowrap overflow-x-auto
       [&::-webkit-scrollbar]:hidden
       gap-10 h-full w-2/3 p-6 rounded-r-full
