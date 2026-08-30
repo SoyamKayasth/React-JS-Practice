@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import '../todo.css'
 import TodoInput from "./TodoInput";
 import TodoList from "./TodoList";
@@ -6,27 +6,36 @@ import { v4 as uuid } from 'uuid';
 
 export default function Todo(){
     
- const [tasks, setTasks] = useState([]);
+ const [tasks, setTasks] = useState(() => {
+     const saved = localStorage.getItem("tasks");
+      return saved ? JSON.parse(saved) : [];
+ });
   
  const [newTodo, setNewTodo] = useState("");
+
+ useEffect(() => {
+       localStorage.setItem("tasks", JSON.stringify(tasks));           
+}, [tasks]);
  
    const getNewTodo = (e) => {
-      setNewTodo(e.target.value);
-      console.log(newTodo); 
+      setNewTodo(e.target.value);      
    };
 
    const addTask = () => {
     if(!newTodo.trim()) return;
-      setTasks((prevTasks) => (
-          [...prevTasks, {
+
+    let newTask = {
                           id: uuid(),
                           name: newTodo,
                           isDone: false,
                           isEdit: false,
                           createdAt: Date.now()
-                   }]
-                ));
-     setNewTodo("");    
+                   };
+      
+      setTasks((prevTasks) => (
+          [...prevTasks, newTask ] ));
+       
+        setNewTodo("");    
 
    }
 
